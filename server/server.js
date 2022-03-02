@@ -5,7 +5,7 @@ const cors = require('cors');
 app.use(cors());
 
 const appRoutes = require("./controller/app")
-app.use('/', appRoutes)
+app.use('/data', appRoutes)
 
 app.get('/', (req, res) => {
     res.send('Hello there!');
