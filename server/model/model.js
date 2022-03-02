@@ -4,7 +4,7 @@ class Data {
     constructor(data) {
         this.id = data.id;
         this.name = data.name;
-        this.link = data.link;
+        this.url = data.url;
     }
 
     static getAll() {
@@ -18,7 +18,7 @@ class Data {
             const info = new Data(dataName);
             return info;
         } catch (err) {
-            throw new Error('That cohort does not exist');
+            throw new Error('That ID does not exist');
         }
     }
 

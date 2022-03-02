@@ -22,9 +22,7 @@ router.get('/:id', (req, res) => {
 router.get('/cohort/:name', (req, res) => {
     try {
         const name = String(req.params.name);
-        console.log(name);
         const nameData = data.findByName(name);
-        console.log(nameData)
         res.send(nameData);
     } catch(err) {
         console.log(err);
