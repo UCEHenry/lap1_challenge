@@ -10,3 +10,5 @@ btn.addEventListener('click', event =>{
 button2.addEventListener('click', event =>{
     console.log ("hello")
 });
+
+
