@@ -1,41 +1,30 @@
-const { findByName } = require("../../server/model/model");
-
 // SETUP
-const btn = document.getElementById('button1');
-const button2 = document.getElementById('button2');
-
-
+const btn1 = document.getElementById('button1');
+const btn2 = document.getElementById('button2');
 
 // Bind event listeners
-btn.addEventListener('click', getAllResults);
+btn1.addEventListener('click', getAllResults);
+btn2.addEventListener('click', getOneResult);
 
-button2.addEventListener('click', getOneResult );
+function getAllResults(e){
+    e.preventDefault()
+    fetch('http://localhost:3000/data') 
+    .then(res => res.json())
+    .then(res => {
+            let data = [];
+            res.forEach(element => {
+                console.log(element.name);
+                data.push(element.name);
+            });
+            console.log(data);
+            document.querySelector("#result").innerHTML = data;
 
-// function getAllResults(){
-//     let data = "" 
-    // fetch('http://localhost:3000/data') 
-    //     .then(res => res.json())
-    //     .then(res => document.querySelector("#results").innerHTML = res)
-    //     .then(res => {
-    //         console.log(json[0]);
-    //         // data = res;
-    //         // console.log(data);
-    //         // console.log(res)
-    //     })
-        function getAllResults(e){
-            e.preventDefault()
-            fetch('http://localhost:3000/data') 
-                .then(res => res.text())
-                .then(res => document.querySelector("#results").innerHTML = res)
-                .then(res => {
-                  
-                    data = res;
-                    console.log(data);
-                    console.log(res)
-                })
-
-
-        .catch(console.log(err))
+        });
+        // .then(res => {
+        //     // console.log(res[0].name);
+        //     data = res;
+        //     console.log(data);
+        // })
 };
 
 // function redirect(event) {
@@ -56,15 +45,15 @@ button2.addEventListener('click', getOneResult );
 function getOneResult(){
     fetch('http://localhost:3000/data')
         .then(res => res.json())
-        .then((data) => {
+        .then(data => {
             let resources = data;
             console.log(data);
-            resources.map(function(resource){
-            let li = document.createElement("ul")
-            let name = document.createElement("li");
-            name.innerHTML = `${resource.name}`;
-            li.appendChild(name);
-            
+
+            resources.map(function(resource) {
+                let li = document.createElement("ul")
+                let name = document.createElement("li");
+                name.innerHTML = `${resource.name}`;
+                li.appendChild(name);
             });
         });
         ul.appendChild(li);
