@@ -12,23 +12,31 @@
 <body>
   <!--futureproof logo-->
   <div class="main">
+    
     <img src="assets/images/images.png" alt="" class="futureproof">
     <!--futureproof search-->
-    <div class="search">
-      <!--<span class="searchIcon"> search</span>-->
-      <input type="text" id="form-search" name="" placeholder="Search futureproof">
-      <!-- <span class="searchIcon"> mic</span>-->
-    </div>
-    <br></br>
-    <br></br>
-    <!--buttons for search-->
-    <div class="search_buttons">
-      <button id="button1" name="search" value="search"> Search</button>
-      <button id="button2" name="results" value="results"> Results</button>
-    </div>
+
+    <form>
+      <div class="search">
+        <!--<span class="searchIcon"> search</span>-->
+        <input type="text" id="form-search" name="input" placeholder="Search futureproof cohort">
+        <!-- <span class="searchIcon"> mic</span>-->
+      </div>
+
+      <br></br>
+      <br></br>
+
+      <!--buttons for search-->
+      <div class="search_buttons">
+        <input type="submit" name="search" value="Search">
+        <button id="button1" name="results" value="Results"> Results</button>
+      </div>
+    </form>
+
     <p id="results"></p>
+
     <ul id="result">
-      <li></li>
+      <!-- <li></li> -->
     </ul>
   </div>
 
