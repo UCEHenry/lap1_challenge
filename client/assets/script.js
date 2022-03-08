@@ -17,7 +17,7 @@ function searchResults(e){
             addLink.href = `${res.url}`;
             addLink.textContent = res.name;
             newList.appendChild(addLink);
-            document.querySelector("#results").append(newList);
+            document.querySelector("#result").append(newList);
         });
 };
 
@@ -35,7 +35,7 @@ function getAllResults(e){
                 addLink.href = `${element.url}`;
                 addLink.textContent = element.name;
                 newList.appendChild(addLink);
-                document.querySelector("#results").append(newList);
+                document.querySelector("#result").append(newList);
             });
             // console.log(data);
             // document.querySelector("#result").innerHTML = data;

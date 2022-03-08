@@ -10,6 +10,7 @@ body{
     left: 50%;
     transform: translate( -50%, -50%);
 }
+
 .futureproof{
     max-height: 100%;
     max-width: 100%;
@@ -17,13 +18,15 @@ body{
     object-position: center bottom;
     width: auto;
 }
+
 .search{
     width: 500px;
     height: 45px;
     position: absolute;
     object-position: center;
-    transform: translate(-20%, 50%);
+    transform: translate(-5%, 50%);
 }
+
 input[type= "text"]{
     position: absolute;
     width: 100%;
@@ -37,10 +40,10 @@ input[type= "text"]{
     font-size: 16px;
     font-family: sans-serif;
 }
+
 .search_buttons{
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
